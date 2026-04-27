@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Джоске Хигашиката</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+body {
+  background: url("Фон.png") no-repeat center/cover;
+  color: white;
+}
+.header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #5a2a2a, #a05a5a);
+  padding: 15px;
+}
+.logo img {
+  width: 180px;
+}
+.header-content {
+  flex: 1;
+  text-align: center;
+}
+.header-content h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+.nav a:hover {
+  color: yellow;
+}
+.search {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+}
+.main {
+  padding: 30px;
+}
+.description {
+  font-size: 20px;
+  max-width: 900px;
+  margin-bottom: 30px;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.characters img {
+  width: 500px;
+  border: 5px solid black;
+}
+.features {
+  padding: 20px;
+  border-radius: 10px;
+}
+.features h2 {
+  margin-bottom: 10px;
+}
+.features ul {
+  list-style: none;
+}
+.features li {
+  margin: 8px 0;
+}
+button {
+  margin: 5px;
+  padding: 5px 10px;
+}
+.footer {
+  background: linear-gradient(90deg, #5a2a2a, #a05a5a);
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  margin-top: 30px;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #5a2a2a;
+  min-width: 200px;
+  top: 100%;
+  border-radius: 5px;
+}
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  background: #a05a5a;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.figma-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  gap: 20px;
+}
+.left-info {
+  width: 30%;
+  padding: 20px;
+  border-radius: 10px;
+}
+.center-slider {
+  width: 35%;
+  text-align: center;
+}
+.center-slider img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border: 5px solid black;
+  border-radius: 10px;
+}
+.right-info {
+  width: 30%;
+  background: rgba(160, 90, 90, 0.55);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+}
+.slider-buttons button {
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.left-info,
+.right-info {
+  min-height: 420px;
+}
+.slider-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+.btn-img {
+  width: 90px !important;
+  height: 60px !important;
+  object-fit: contain;
+  display: block;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn-img:hover {
+  transform: scale(1.2);
+}
+.btn-img:focus,
+.btn-img:active {
+  outline: none;
+  border: none;
+}
+img {
+  outline: none;
+  border: none;
+}
+</style>
+</head>
+<body>
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">
+    <img src="Логотип.png">
+  </div>
+  <div class="header-content">
+    <h1>Путеводитель по аниме<br>Невероятные приключения ДжоДжо</h1>
+    <div class="nav">
+      <a href="index.html">Главная</a>
+      <div class="dropdown">
+  <a href="#">Персонажи</a>
+  <div class="dropdown-content">
+    <a href="Джотаро.html">Джотаро Куджо</a>
+    <a href="Джозеф.html">Джозеф Джостар</a>
+    <a href="Джолин.html">Джолин Куджо</a>
+    <a href="Джоске.html">Джоске Хигашиката</a>
+  </div>
+</div>
+<input type="text" id="search" class="search" placeholder="Поиск">
+<button onclick="search()">Поиск</button>
+      <a href="Тест.html">Тест</a>
+    </div>
+  </div>
+</div>
+<div class="main">
+  <div class="figma-layout">
+    <div class="left-info">
+      <h2>Джоске Хигашиката</h2>
+      <p>
+        главный герой четвёртой части серии. Он добрый, вспыльчивый и очень защищает своих друзей и родных. Несмотря на дружелюбный характер, Джоске становится крайне опасным, если кто-то оскорбляет его или его причёску.
+      </p>
+      <p style="margin-top:10px;">
+        Он часто действует импульсивно, но при этом быстро принимает правильные решения в бою. Его стенд Crazy Diamond делает его одним из самых универсальных бойцов.
+      </p>
+    </div>
+    <div class="center-slider">
+      <img id="slider" src="Джоске1.png">
+<div class="slider-buttons">
+  <img src="Лево.png" onclick="prev()" class="btn-img">
+  <img src="Право.png" onclick="next()" class="btn-img">
+</div>
+    </div>
+    <div class="right-info">
+      <h2>Способности станда</h2>
+      <ul>
+        <li> Огромная физическая сила</li>
+        <li> Очень высокая скорость ударов</li>
+        <li> Возможность “восстанавливать” предметы и людей</li>
+        <li> Пересборка предметов в другое состояние</li>
+      </ul>
+      <p style="margin-top:10px;">
+      </p>
+    </div>
+  </div>
+</div>
+<!-- FOOTER -->
+<div class="footer">
+  <p>© 2026 JoJo Site</p>
+  <p>Email: jojofan@mail.com</p>
+  <p>Discord: JoJoFan#5294</p>
+</div>
+<script>
+function search() {
+  var query = document.getElementById('search').value.trim().toLowerCase();
+  if (query.indexOf("джотаро") !== -1) {
+    window.location.href = "Джотаро.html";
+  } 
+  else if (query.indexOf("джозеф") !== -1) {
+    window.location.href = "Джозеф.html";
+  } 
+  else if (query.indexOf("джолин") !== -1) {
+    window.location.href = "Джолин.html";
+  } 
+  else if (query.indexOf("джоске") !== -1) {
+    window.location.href = "Джоске.html";
+  } 
+  else {
+    alert("Ничего не найдено");
+  }
+}
+document.getElementById("search").addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    search();
+  }
+});
+let images = ["Джоске1.png", "Джоске2.png", "Джоске3.png"];
+let i = 0;
+function next() {
+  i = (i + 1) % images.length;
+  document.getElementById("slider").src = images[i];
+}
+function prev() {
+  i = (i - 1 + images.length) % images.length;
+  document.getElementById("slider").src = images[i];
+}
+</script>
+</body>
+</html>

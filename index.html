@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>JoJo Site</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+body {
+  background: url("Фон.png") no-repeat center/cover;
+  color: white;
+}
+.header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #5a2a2a, #a05a5a);
+  padding: 15px;
+}
+.logo img {
+  width: 180px;
+}
+.header-content {
+  flex: 1;
+  text-align: center;
+}
+.header-content h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+.nav a:hover {
+  color: yellow;
+}
+.search {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+}
+.main {
+  padding: 30px;
+}
+.description {
+  font-size: 20px;
+  max-width: 900px;
+  margin-bottom: 30px;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.characters img {
+  width: 500px;
+  border: 5px solid black;
+}
+.features {
+  padding: 20px;
+  border-radius: 10px;
+}
+.features h2 {
+  margin-bottom: 10px;
+}
+.features ul {
+  list-style: none;
+}
+.features li {
+  margin: 8px 0;
+}
+button {
+  margin: 5px;
+  padding: 5px 10px;
+}
+.footer {
+  background: linear-gradient(90deg, #5a2a2a, #a05a5a);
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  margin-top: 30px;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #5a2a2a;
+  min-width: 200px;
+  top: 100%;
+  border-radius: 5px;
+}
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  background: #a05a5a;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">
+    <img src="Логотип.png">
+  </div>
+  <div class="header-content">
+    <h1>Путеводитель по аниме<br>Невероятные приключения ДжоДжо</h1>
+    <div class="nav">
+      <a href="index.html">Главная</a>
+      <div class="dropdown">
+  <a href="#">Персонажи</a>
+  <div class="dropdown-content">
+    <a href="Джотаро.html">Джотаро Куджо</a>
+    <a href="Джозеф.html">Джозеф Джостар</a>
+    <a href="Джолин.html">Джолин Куджо</a>
+    <a href="Джоске.html">Джоске Хигашиката</a>
+  </div>
+</div>
+<input type="text" id="search" class="search" placeholder="Поиск">
+<button onclick="search()">Поиск</button>
+      <a href="Тест.html">Тест</a>
+    </div>
+  </div>
+</div>
+<!-- MAIN -->
+<div class="main">
+  <p class="description">
+    JoJo’s Bizarre Adventure — это культовое аниме, которое рассказывает
+    историю семьи Джостаров на протяжении нескольких поколений.
+    Каждый герой сталкивается с опасными врагами и необычными способностями.
+  </p>
+  <div class="content">
+    <div class="characters">
+      <img src="Главные герои.png">
+    </div>
+    <div class="features">
+      <h2>Это аниме любят за:</h2>
+      <ul>
+        <li>• Уникальный визуальный стиль</li>
+        <li>• Харизматичные персонажи</li>
+        <li>• Умные и нестандартные битвы</li>
+        <li>• Много мемов и культовых сцен</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p>© 2026 JoJo Site</p>
+  <p>Email: jojofan@mail.com</p>
+  <p>Discord: JoJoFan#5294</p>
+</div>
+<script>
+function search() {
+  var query = document.getElementById('search').value.trim().toLowerCase();
+  if (query.indexOf("джотаро") !== -1) {
+    window.location.href = "Джотаро.html";
+  } 
+  else if (query.indexOf("джозеф") !== -1) {
+    window.location.href = "Джозеф.html";
+  } 
+  else if (query.indexOf("джолин") !== -1) {
+    window.location.href = "Джолин.html";
+  } 
+  else if (query.indexOf("джоске") !== -1) {
+    window.location.href = "Джоске.html";
+  } 
+  else {
+    alert("Ничего не найдено");
+  }
+}
+document.getElementById("search").addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    search();
+  }
+});
+</script>
+</body>
+</html>
